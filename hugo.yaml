@@ -1,4 +1,4 @@
-#基础配置
+# 基础配置
 baseURL: 'https://wujin-master.github.io/'
 languageCode: 'zh-CN'
 title: '吴进的个人站'
@@ -10,7 +10,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 
-#配置菜单
+# 配置菜单
 menu:
   main:
     - name:  搜索
@@ -26,15 +26,4 @@ menu:
       url: /
       weight: 10
 
-#主题配置参数
-params:
-  defaultTheme: auto
-  homeInfoParams:
-    Title: "技能树"
-    Content: >
-      XXXXXXXXXX你要显示内容
-  socialIcons:
-    - name: Github
-      url: "https://github.com/RmondJone"
-    - name: Email
-      url: about/
+

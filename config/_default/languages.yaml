@@ -1,0 +1,9 @@
+# Enable multilanguage site support
+en:
+  languageName: English
+  title: Wu Jin's Site
+  weight: 1
+zh-cn:
+  languageName: 中文
+  title: 吴进的个人站
+  weight: 2
