@@ -5,3 +5,8 @@ lastmod: '2023-11-16'
 ---
 
 # hugo常用命令
+
+```
+hugo new site . # 在当前目录下新建站
+hugo new site siteName # 在当前目录下新建名为siteName的站
+```
