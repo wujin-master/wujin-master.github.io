@@ -5,3 +5,10 @@ lastmod: '2023-11-16'
 ---
 
 # Git常用命令
+
+```
+git init
+git add .
+git commit
+git push
+```
