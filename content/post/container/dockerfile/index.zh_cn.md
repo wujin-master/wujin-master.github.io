@@ -24,7 +24,23 @@ FROM指令用来声明一个已存在的镜像，作为Dockerfile的基础镜像
 FROM <IMAGE>
 FROM <IMAGE>:<TAG>
 ```
-FROM指令必须是Dockerfile的第一个指令
+~~FROM指令必须是Dockerfile的第一个指令~~ 这是我早期的错误认识，实际上FROM不必为第一个指令, ARG指令可以在FORM之前。
+
+### ARG
+ARG指令用来声明构建参数，
+```
+# 仅声明
+ARG KEY
+
+# 声明并赋默认值
+ARG KEY=value
+```
+使用参数时`${KEY}`
+
+当构建命令`docker build`中使用`--build-arg KEY=newValue`时，会以构建命令中的值为准。
+
+正如FROM中所写，ARG可以在FORM之前，但在FORM之前由ARG声明的参数只能在FROM中使用。实践过程中，为了解决 “如何通过在给dockerfile中传递不同的基础镜像，以实现一个dockerfile可以制作出x86架构的容器镜像和arm架构的容器镜像” 这个问题时，发现了ARG指令这个特性。
+
 ### MAINTAINER
 MAINTAINER指令用来描述镜像的作者信息，应包括镜像的所有者和联系方式
 ```
@@ -131,11 +147,3 @@ USER nginx
 ONBUILD <其他指令>
 ```
 实际工作中尚未使用过。
-## 二、Dockerfile构建过程
-1. 先以FROM指定的基础镜像运行一个容器
-2. 执行一条指令，对该容器进行修改
-3. 就修改后的容器创建新的镜像层
-4. 基于上一个镜像层，创建新的容器
-5. 执行下一条指令，对新的容器进行修改
-6. ...
-7. 直至所有指令执行完毕
