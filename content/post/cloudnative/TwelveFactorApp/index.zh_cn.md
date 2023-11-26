@@ -1,15 +1,15 @@
 ---
-title: '12要素应用'
+title: '云原生15要素'
 date: 2023-11-25T22:40:43+08:00
 lastmod: 2023-11-25T22:40:43+08:00
 draft: false
 ---
-# 12要素应用
+# 云原生15要素
 12要素应用（Twelve-Factor App），出自Heroku创始人 Adam Wiggins 在2012年编写的《The Twelve-Factor App》，最开始是用来衡量一个后端服务是否适合搬到云上，描述了云端应用服务应当遵循的一些最佳实践，被称为“云12要素”。
 
 在云原生的理念推广后，Pivotal的 Kevin Hoffman 在《Beyond the Twelve-Factor App》书中修订了最初的12个因素，并增加了3个额外的因素，被称为“云原生15要素”。
 
-本文虽然名为《12要素应用》，但实际内容按后者的“云原生15要素”讲述
+本文按后者的“云原生15要素”讲述
 
 ## 1.基准代码 Codebase
 **一份基准代码，多份部署 (One codebase tracked in revision control, many deploys)。**
